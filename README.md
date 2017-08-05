@@ -32,9 +32,10 @@ Note:- If any of the above topic is unfamiliar with you then just Google for the
     <li> Create a Folder on your computer where you desire to keep this project.
     <li> Open Command Prompt/Terminal depending on what OS you are using.
     <li> 'cd' to your newly created folder.
-    <li> Enter the Following command <code>git clone https://github.com/manulaggarwal/javascript.git</code>
-    <li> <code>cd javascript</code>
+    <li> Enter the Following command <code>git clone https://github.com/manulaggarwal/React.git</code>
+    <li> <code>cd React</code>
     <li> <code>npm i</code> <blockquote>This would install the dependencies required to run the project. Check <b>package.json</b> for dependency lists.</blockquote>
+    <li> git checkout react-slave1
     <li> <code>npm start</code>
   </ul>
   Your application would run on your default browser on 8080 default port.
