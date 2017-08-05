@@ -1,0 +1,27 @@
+{
+  "name": "react-redux_basics",
+  "version": "1.0.0",
+  "description": "React-Redux tutorial",
+  "main": "./index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manul Aggarwal",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^2.30.0",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
