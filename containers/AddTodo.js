@@ -7,10 +7,13 @@ let AddTodo = ({onSubmit})=>{
     let input;
     return (
         <Form onSubmit={()=>onSubmit(input)}>
-            <input ref={node=>{input=node}} />
-            <button type="submit">
-                Add Todo
-            </button>
+            <div className="form-group">
+                <input placeholder="Add Todo" ref={node=>{input=node}} className="form-control"/>
+                <br />
+                <button type="submit" className="btn btn-primary form-control">
+                    Add Todo
+                </button>
+            </div>
         </Form>
     )
 }
