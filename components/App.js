@@ -7,7 +7,7 @@ import SelectedFilter from '../containers/SelectedFilter';
 const App = () => (
     <div>
     <div className="col-sm-1"></div>
-    <div className="col-sm-2">
+    <div className="col-sm-4">
         <AddTodo />
         <VisibleTodoList />
         <SelectedFilter />
