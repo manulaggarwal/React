@@ -16,8 +16,6 @@ const todo = (state = {}, action) => {
             return Object.assign({}, state, {
                 text: action.text
             })
-        case 'CANCEL_ACTION':
-            return ;
         default: return state;
     }
 }
@@ -33,8 +31,8 @@ const todos = (state = [], action = {}) => {
             return state.map(t=> todo(t, action))
         case 'UPDATE_TODO':
             return state.map(t=>todo(t, action)) 
-        case 'CANCEL_ACTION':
-            return ;
+        case 'DELETE_TODO':
+            return state.filter(t=>t.id !== action.id);
         default: return state;
     }
 }

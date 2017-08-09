@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Todo from './Todo';
 
-const TodoList = ({todos, onTodoClick, onTodoUpdate}) =>{ 
+const TodoList = ({todos, onTodoClick, onTodoUpdate, onTodoDelete}) =>{ 
     return (
     <ul>
         {
@@ -12,6 +12,7 @@ const TodoList = ({todos, onTodoClick, onTodoUpdate}) =>{
                 {...todo}
                 onClick={()=>onTodoClick(todo.id)}
                 onTodoUpdate={onTodoUpdate}
+                onTodoDelete={onTodoDelete}
             />
         )}
     </ul>
@@ -24,7 +25,8 @@ TodoList.propTypes = {
         text: PropTypes.string.isRequired
     }).isRequired).isRequired,
     onTodoClick: PropTypes.func.isRequired,
-    onTodoUpdate: PropTypes.func.isRequired
+    onTodoUpdate: PropTypes.func.isRequired,
+    onTodoDelete: PropTypes.func.isRequired
 }
 
 TodoList.defaultProps = {

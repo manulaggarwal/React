@@ -7,6 +7,13 @@ export const addTodo = text => {
     };
 }
 
+export const deleteTodo = id => {
+    return {
+        type: 'DELETE_TODO',
+        id
+    }
+}
+
 export const updateTodo = (id, text) => {
     return {
         type: 'UPDATE_TODO',

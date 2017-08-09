@@ -6,13 +6,23 @@ import SelectedFilter from '../containers/SelectedFilter';
 
 const App = () => (
     <div>
-    <div className="col-sm-1"></div>
-    <div className="col-sm-4">
-        <AddTodo />
-        <VisibleTodoList />
-        <SelectedFilter />
-        <Footer /> 
-    </div>
+        <div className="row">
+            <div className="col-sm-4"></div>
+            <div className="col-sm-4">
+                <strong>MY TODO LIST</strong>
+            </div>
+            <div className="col-sm-4"></div>
+        </div>
+        <div className="row">
+            <div className="col-sm-4"></div>
+            <div className="col-sm-4 sheet">
+                <AddTodo/>
+                <VisibleTodoList/>
+                <SelectedFilter/>
+                <Footer/>
+            </div>
+            <div className="col-sm-4"></div>
+        </div>
     </div>
 )
 export default App;

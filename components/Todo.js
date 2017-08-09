@@ -13,9 +13,11 @@ class Todo extends React.Component {
     }
 
     componentWillReceiveProps() {
-        this.setState({
-            update: !this.state.update
-        })
+        if (this.state.update) {
+            this.setState({
+                update: !this.state.update
+            })
+        }
     }
 
     onEdit() {
@@ -31,21 +33,19 @@ class Todo extends React.Component {
     }
 
     render() {
-        const {onClick, completed, id, text} = this.props;
+        const {onClick, completed, text} = this.props;
         return (
-            <div>
-                <li
-                    onClick={onClick}
+            <li  
                     style={{
                         textDecoration: completed? 'line-through': 'none',
                         cursor: 'pointer'
                     }}>
                     <strong style={{
                         display: !this.state.update?'block':'none'
-                    }}>
+                    }}  onClick={onClick} >
                         {text}
                     </strong>
-                </li>
+                
                 <input ref={node=>{this.input=node}} type="text" className="form-control" defaultValue={this.text} style={{
                         display: this.state.update?'block':'none'
                     }}/>
@@ -53,9 +53,9 @@ class Todo extends React.Component {
                     <button type="button" onClick={this.onEdit} className={this.state.update?'btn btn-success':'btn btn-warning'}>
                         {this.state.update?'Update':'Edit'}
                     </button>
-                    <button type="button" className="btn btn-danger">Delete</button>
+                    <button type="button" className="btn btn-danger" onClick={()=>{this.props.onTodoDelete(this.id)}}>Delete</button>
                 </div>
-            </div>
+            </li>
         )
     }
 }

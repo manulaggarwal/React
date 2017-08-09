@@ -11,14 +11,17 @@ const Form = ({onSubmit,name})=>{
         e.target.value = '';
     }
     return (
-        <div>
-            <Input onBlur={onBlur} name={name} className="form-control" onChange={onChange}/>
-            <br />
-            <button type="submit" onClick={()=>onSubmit(form)} className="btn btn-primary form-control">
-                Add Todo
-            </button>
-            <br />
-            <br />
+        <div className="row">
+            <div className="row col-md-12"></div>
+            <div className="col-sm-4">
+                <button type="submit" onClick={()=>onSubmit(form)} className="btn btn-primary form-control">
+                    Add Todo
+                </button>
+            </div>
+            <div className="col-sm-4">
+                <Input onBlur={onBlur} name={name} className="form-control" onChange={onChange}/>
+            </div>
+            
         </div>
     );
 }
