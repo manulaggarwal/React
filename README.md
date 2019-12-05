@@ -60,7 +60,8 @@ Note:- If any of the above topic is unfamiliar with you then just Google for the
   Type of Action:- 'Purchase'
   Changes associated with action:- purchase amount, transaction id
   This is how action would look like in code form:-
-  ```js
+  
+  ```
   let transactionId = 0; 
   export function makePurchase(purchaseAmount) {   //makePurchase here would be the action-creator.
       return {
@@ -70,6 +71,7 @@ Note:- If any of the above topic is unfamiliar with you then just Google for the
       } //returning action with new state.
   }
   ```
+  
   You use Actions to help update the store with new/updated record.
  
 <h4>2. Reducers</h4>
@@ -79,7 +81,8 @@ Note:- If any of the above topic is unfamiliar with you then just Google for the
   Note:- Reducer would always throw a new state rather than updating(mutating) the existing state. This is important as making update to the existing store can break features such as time-travel which comes bundled with redux.
   If no action is matched in reducer then the same state is thrown back.
   <b>Example:-</b>
-  ```js
+  
+  ```
   const purchase = function(state,action) {
     switch(action.type) {
       case 'PURCHASE': return [           //the spread operator will keep the previous records intact and the the new state will be appended to existing state.
@@ -94,6 +97,7 @@ Note:- If any of the above topic is unfamiliar with you then just Google for the
     }
   } 
   ```
+  
 <h4>3. Components</h4>
   Components are your functions/classes that react uses to render the UI. Components mostly should be independent and should only be used to for rendering the UI. Consider this as Presentational layer.
  
